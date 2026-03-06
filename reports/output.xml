@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-05T20:18:21.321260" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Meus Projetos\Projeto QA\biblioteca-robot-framework\tests\web\login\login_test.robot">
+<kw name="Abrir Navegador" owner="login_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:21.850390" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-05T20:18:21.850122" elapsed="2.402063"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.252434" elapsed="0.023837"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:21.849103" elapsed="2.427324"/>
+</kw>
+<test id="s1-t1" name="CT001 - Login com credenciais validas" line="16">
+<kw name="Fazer Login" owner="login_page">
+<kw name="Preencher Login" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:24.278795" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${INPUT_USUARIO}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.278429" elapsed="0.085087"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:24.364020" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.363731" elapsed="0.055602"/>
+</kw>
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-03-05T20:18:24.278140" elapsed="0.141425"/>
+</kw>
+<kw name="Clicar Em Login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:24.420355" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.420127" elapsed="0.080180"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:24.419827" elapsed="0.080600"/>
+</kw>
+<arg>${USUARIO_VALIDO}</arg>
+<arg>${SENHA_VALIDA}</arg>
+<status status="PASS" start="2026-03-05T20:18:24.277760" elapsed="0.222733"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:24.505861" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.500774" elapsed="0.005187"/>
+</kw>
+<doc>Verifica se o login com credenciais válidas redireciona para a home</doc>
+<tag>login</tag>
+<tag>positivo</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-03-05T20:18:24.277052" elapsed="0.229201"/>
+</test>
+<test id="s1-t2" name="CT002 - Login com senha invalida" line="22">
+<kw name="Abrir Navegador" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:24.507768" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-05T20:18:24.507553" elapsed="1.331709"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-05T20:18:25.839471" elapsed="0.018564"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:24.507273" elapsed="1.350880"/>
+</kw>
+<kw name="Fazer Login" owner="login_page">
+<kw name="Preencher Login" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:25.859359" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${INPUT_USUARIO}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:25.859137" elapsed="0.082370"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:25.942021" level="INFO">Typing text 'senha_errada' into text field 'id=password'.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:25.941728" elapsed="0.055317"/>
+</kw>
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-03-05T20:18:25.858855" elapsed="0.138324"/>
+</kw>
+<kw name="Clicar Em Login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:25.997836" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:25.997635" elapsed="0.064979"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:25.997373" elapsed="0.065464"/>
+</kw>
+<arg>${USUARIO_VALIDO}</arg>
+<arg>${SENHA_INVALIDA}</arg>
+<status status="PASS" start="2026-03-05T20:18:25.858469" elapsed="0.204446"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:26.141449" level="INFO">Element 'css=.error-message-container' is displayed.</msg>
+<arg>${MSG_ERRO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-05T20:18:26.063462" elapsed="0.078092"/>
+</kw>
+<doc>Verifica se exibe mensagem de erro com senha incorreta</doc>
+<tag>login</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-03-05T20:18:24.506765" elapsed="1.635072"/>
+</test>
+<test id="s1-t3" name="CT003 - Login com usuario invalido" line="29">
+<kw name="Abrir Navegador" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:26.143280" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-05T20:18:26.143066" elapsed="1.323065"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.466322" elapsed="0.027031"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:26.142817" elapsed="1.350664"/>
+</kw>
+<kw name="Fazer Login" owner="login_page">
+<kw name="Preencher Login" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:27.494701" level="INFO">Typing text 'usuario_errado' into text field 'id=user-name'.</msg>
+<arg>${INPUT_USUARIO}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.494476" elapsed="0.080589"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:27.575572" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.575279" elapsed="0.055691"/>
+</kw>
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-03-05T20:18:27.494187" elapsed="0.136909"/>
+</kw>
+<kw name="Clicar Em Login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:27.631736" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.631537" elapsed="0.060858"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:27.631282" elapsed="0.061289"/>
+</kw>
+<arg>${USUARIO_INVALIDO}</arg>
+<arg>${SENHA_VALIDA}</arg>
+<status status="PASS" start="2026-03-05T20:18:27.493804" elapsed="0.198833"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-05T20:18:27.708154" level="INFO">Element 'css=.error-message-container' is displayed.</msg>
+<arg>${MSG_ERRO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.692945" elapsed="0.015309"/>
+</kw>
+<doc>Verifica se exibe mensagem de erro com usuário incorreto</doc>
+<tag>login</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-03-05T20:18:26.142336" elapsed="1.566233"/>
+</test>
+<kw name="Fechar Navegador" owner="login_page" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-05T20:18:27.709796" elapsed="2.119780"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:27.709571" elapsed="2.120132"/>
+</kw>
+<status status="PASS" start="2026-03-05T20:18:21.323078" elapsed="8.506671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">login</stat>
+<stat pass="2" fail="0" skip="0">negativo</stat>
+<stat pass="1" fail="0" skip="0">positivo</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="3" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

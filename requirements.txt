@@ -1,0 +1,14 @@
+# Robot Framework core
+robotframework==7.0
+
+# Testes Web
+robotframework-seleniumlibrary==6.3.0
+
+# Testes API
+robotframework-requests==0.9.6
+
+# Testes de Banco de Dados
+robotframework-databaselibrary==1.4.0
+
+# Relatórios
+robotframework-pabot==2.18.0
