@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do repositÃ³rio
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -23,13 +23,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar dependências
+      - name: Instalar Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Instalar dependÃªncias
         run: pip install -r requirements.txt
 
       - name: Executar testes Robot Framework
-        run: python -m robot -d results tests/
+        run: python -m robot -d results tests/web/
 
-      - name: Publicar relatório
+      - name: Publicar relatÃ³rio
         if: always()
         uses: actions/upload-artifact@v4
         with:
