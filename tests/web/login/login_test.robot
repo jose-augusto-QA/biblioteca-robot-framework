@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../../../resources/web/login_page.robot
-Resource    ../../../resources/global_variables.robot
+Resource    ../../../resources/web/login_page.resource
+Resource    ../../../resources/global_variables.resource
 
 Suite Setup     Abrir Navegador
 Suite Teardown  Fechar Navegador

@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-Resource    ../global_variables.robot
+Resource    ../global_variables.resource
 
 *** Variables ***
 # Locators da página de Login
@@ -12,7 +12,12 @@ ${MSG_ERRO}         css=.error-message-container
 
 *** Keywords ***
 Abrir Navegador
-    Open Browser    ${BASE_URL}    ${BROWSER}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --disable-gpu
+    Open Browser    ${BASE_URL}    ${BROWSER}    options=${options}
     Maximize Browser Window
 
 Preencher Login

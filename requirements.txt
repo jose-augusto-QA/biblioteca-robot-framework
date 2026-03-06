@@ -1,14 +1,17 @@
 # Robot Framework core
-robotframework==7.0
+robotframework==7.4.1
 
 # Testes Web
-robotframework-seleniumlibrary==6.3.0
+robotframework-seleniumlibrary==6.8.0
 
 # Testes API
-robotframework-requests==0.9.6
+robotframework-requests==0.9.7
 
 # Testes de Banco de Dados
-robotframework-databaselibrary==1.4.0
+robotframework-databaselibrary==2.4.1
 
 # Relatórios
-robotframework-pabot==2.18.0
+robotframework-pabot==5.2.2
+
+# Outras dependências
+robotframework-excellib==2.0.1
